@@ -123,6 +123,7 @@ unsubscribe();
 | :---: | :---: | :---:
 | fn | (data, state) => data | pure function for mutation
 | initialState | - | the init value of *maintainable node* indicates the data type and structure
+---
 
 **Suggestion**
 
@@ -196,6 +197,7 @@ const company = gluer((data, state) => {
   legalPerson: 'Vishal',
   address: 'Ganges'
  });
+
 const origin = gluer((data, state) => {
   // state is latest
   // like { city: string, country: string, company: { legalPerson: string, address: string } }
@@ -255,4 +257,4 @@ Store has properties below.
 | referToState | Function | Return the data indexed by model. If the input value is not in the model, return undefined.
 | hasModel | Function | Return boolean. Determine whether the input value is in the model.
 | subscribe | Function | Return unsubscribe function. const unsubscribe = subscribe([deps], callback);
-
+---
